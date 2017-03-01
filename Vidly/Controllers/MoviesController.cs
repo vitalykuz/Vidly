@@ -21,7 +21,7 @@ namespace Vidly.Controllers
                 new Customer {Name = "Customer 2"}
             };
 
-            var viewModel = new RandomMovieViewModel
+            var viewModel = new RandomMovieViewModel    
             {
                 Movie = movie,
                 Customers = customers

@@ -4,10 +4,33 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>@Model.Movie.Name</h2>
-@foreach (var customer in Model.Customers)
-{
+@*if I want to add a custom class (or any class) to any tag:  *@
+
+@{
+    var popularMovieClass = Model.Customers.Count > 1 ? "popular" : null;
 
 }
+
+
+<h2 class="@popularMovieClass">@Model.Movie.Name</h2>
+
+
+
+@if (Model.Customers.Count == 0)
+{
+    <p>No one has rented this movie before</p>
+}
+else
+{
+    <ul>
+        @foreach (var customer in Model.Customers)
+        {
+            <li>@customer.Name</li>
+        }
+    </ul>
+}
+
+
+
 
 
