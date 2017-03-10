@@ -43,17 +43,19 @@ namespace Vidly.Controllers
         // GET: Movies
         public ActionResult Index(int? pageIndex, string sortBy) // string is nullabale by default in C#, that's why we dont add "?" as we did in int
         {
-            if (!pageIndex.HasValue)
-            {
-                pageIndex = 1;
-            }
 
-            if (sortBy.IsNullOrWhiteSpace())
+            var movies = new List<Movie>()
             {
-                sortBy = "Name";
-            }
+                new Movie {Name = "Shrek"},
+                new Movie {Name = "Wally"}
+            };
 
-            return Content(String.Format("pageIndex={0}&sortBy={1}", pageIndex, sortBy));
+            var viewModel = new MoviesViewModel
+            {
+                Movies = movies
+            };
+
+            return View(viewModel);
         }
 
         // GET: Movies/ByReleaseYear
