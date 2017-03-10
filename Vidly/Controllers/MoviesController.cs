@@ -41,21 +41,37 @@ namespace Vidly.Controllers
         }
 
         // GET: Movies
-        public ActionResult Index(int? pageIndex, string sortBy) // string is nullabale by default in C#, that's why we dont add "?" as we did in int
+        // public ActionResult Index(int? pageIndex, string sortBy) // string is nullabale by default in C#, that's why we dont add "?" as we did in int
+        public ActionResult Index() 
         {
 
-            var movies = new List<Movie>()
-            {
-                new Movie {Name = "Shrek"},
-                new Movie {Name = "Wally"}
-            };
+            var movies = GetMovies();
 
-            var viewModel = new MoviesViewModel
-            {
-                Movies = movies
-            };
+            return View(movies);
+        }
 
-            return View(viewModel);
+        private IEnumerable<Movie> GetMovies()
+        {
+            return new List<Movie>
+            {
+                new Movie { Id = 1, Name = "The big bang theory"},
+                new Movie { Id = 2, Name = "Titanic"},
+                new Movie { Id = 3, Name = "Star Wars"}
+            };
+        }
+
+        //GET: Movies/Details
+        public ActionResult Details(int id)
+        {
+            Console.WriteLine("I am in Details");
+            var movie = GetMovies().SingleOrDefault(m => m.Id == id); 
+            
+            if (movie == null)
+            {
+                return HttpNotFound();
+            }
+
+            return View(movie);
         }
 
         // GET: Movies/ByReleaseYear
