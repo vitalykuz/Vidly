@@ -251,6 +251,10 @@
     <Compile Include="Migrations\201703111244027_UpdateBirthdayColumnInCustomer.Designer.cs">
       <DependentUpon>201703111244027_UpdateBirthdayColumnInCustomer.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201703112220098_AddNewPropertiesToMovieAndDbContext.cs" />
+    <Compile Include="Migrations\201703112220098_AddNewPropertiesToMovieAndDbContext.Designer.cs">
+      <DependentUpon>201703112220098_AddNewPropertiesToMovieAndDbContext.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
@@ -377,6 +381,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201703111244027_UpdateBirthdayColumnInCustomer.resx">
       <DependentUpon>201703111244027_UpdateBirthdayColumnInCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201703112220098_AddNewPropertiesToMovieAndDbContext.resx">
+      <DependentUpon>201703112220098_AddNewPropertiesToMovieAndDbContext.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

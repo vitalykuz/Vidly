@@ -11,6 +11,28 @@ namespace Vidly.Controllers
 {
     public class MoviesController : Controller
     {
+        private ApplicationDbContext _context;
+
+        public MoviesController()
+        {
+            _context = new ApplicationDbContext();
+        }
+
+
+        // GET: Movies
+        // public ActionResult Index(int? pageIndex, string sortBy) // string is nullabale by default in C#, that's why we dont add "?" as we did in int
+        public ActionResult Index()
+        {
+            var movies = _context.Movies.ToList();
+
+            return View(movies);
+        }
+
+        protected override void Dispose(bool disposing)
+        {
+            _context.Dispose();
+        }
+
         // GET: Movies/Random
         public ActionResult Random()
         {
@@ -40,31 +62,10 @@ namespace Vidly.Controllers
             return Content("Id = " + id);
         }
 
-        // GET: Movies
-        // public ActionResult Index(int? pageIndex, string sortBy) // string is nullabale by default in C#, that's why we dont add "?" as we did in int
-        public ActionResult Index() 
-        {
-
-            var movies = GetMovies();
-
-            return View(movies);
-        }
-
-        private IEnumerable<Movie> GetMovies()
-        {
-            return new List<Movie>
-            {
-                new Movie { Id = 1, Name = "The big bang theory"},
-                new Movie { Id = 2, Name = "Titanic"},
-                new Movie { Id = 3, Name = "Star Wars"}
-            };
-        }
-
         //GET: Movies/Details
         public ActionResult Details(int id)
-        {
-            Console.WriteLine("I am in Details");
-            var movie = GetMovies().SingleOrDefault(m => m.Id == id); 
+        {    
+            var movie = _context.Movies.SingleOrDefault(m => m.Id == id); 
             
             if (movie == null)
             {
