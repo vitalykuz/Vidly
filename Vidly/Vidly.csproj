@@ -235,6 +235,22 @@
     <Compile Include="Migrations\201703111132350_UpdateNameColumnInMembershipType.Designer.cs">
       <DependentUpon>201703111132350_UpdateNameColumnInMembershipType.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201703111217125_AddBirthdayPropToCustomer.cs" />
+    <Compile Include="Migrations\201703111217125_AddBirthdayPropToCustomer.Designer.cs">
+      <DependentUpon>201703111217125_AddBirthdayPropToCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201703111231156_AddNullToBirthdayInCustomer.cs" />
+    <Compile Include="Migrations\201703111231156_AddNullToBirthdayInCustomer.Designer.cs">
+      <DependentUpon>201703111231156_AddNullToBirthdayInCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201703111234229_InsertBirthdayToCustomer.cs" />
+    <Compile Include="Migrations\201703111234229_InsertBirthdayToCustomer.Designer.cs">
+      <DependentUpon>201703111234229_InsertBirthdayToCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201703111244027_UpdateBirthdayColumnInCustomer.cs" />
+    <Compile Include="Migrations\201703111244027_UpdateBirthdayColumnInCustomer.Designer.cs">
+      <DependentUpon>201703111244027_UpdateBirthdayColumnInCustomer.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
@@ -349,6 +365,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201703111132350_UpdateNameColumnInMembershipType.resx">
       <DependentUpon>201703111132350_UpdateNameColumnInMembershipType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201703111217125_AddBirthdayPropToCustomer.resx">
+      <DependentUpon>201703111217125_AddBirthdayPropToCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201703111231156_AddNullToBirthdayInCustomer.resx">
+      <DependentUpon>201703111231156_AddNullToBirthdayInCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201703111234229_InsertBirthdayToCustomer.resx">
+      <DependentUpon>201703111234229_InsertBirthdayToCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201703111244027_UpdateBirthdayColumnInCustomer.resx">
+      <DependentUpon>201703111244027_UpdateBirthdayColumnInCustomer.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

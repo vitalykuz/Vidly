@@ -8,6 +8,7 @@ namespace Vidly.Models
 {
     public class Customer
     {
+        //primary key
         public int Id { get; set; }
 
         //if you want to make a property not nullable in database, add required. Now name cant be null and the lenth = 255
@@ -21,5 +22,7 @@ namespace Vidly.Models
 
         //by convention (name of the class+id?), the framework recognises this property as foreign key.
         public byte MembershipTypeId { get; set; }
+
+        public DateTime? Birthday { get; set; }
     }
 }
