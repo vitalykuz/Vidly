@@ -223,6 +223,18 @@
     <Compile Include="Migrations\201703110710047_ApplyAnnotationsToCustomerName.Designer.cs">
       <DependentUpon>201703110710047_ApplyAnnotationsToCustomerName.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201703111118499_AddPropNameToMembershipType.cs" />
+    <Compile Include="Migrations\201703111118499_AddPropNameToMembershipType.Designer.cs">
+      <DependentUpon>201703111118499_AddPropNameToMembershipType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201703111123206_AddRequiredAndStringLengthTo255.cs" />
+    <Compile Include="Migrations\201703111123206_AddRequiredAndStringLengthTo255.Designer.cs">
+      <DependentUpon>201703111123206_AddRequiredAndStringLengthTo255.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201703111132350_UpdateNameColumnInMembershipType.cs" />
+    <Compile Include="Migrations\201703111132350_UpdateNameColumnInMembershipType.Designer.cs">
+      <DependentUpon>201703111132350_UpdateNameColumnInMembershipType.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
@@ -328,6 +340,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201703110710047_ApplyAnnotationsToCustomerName.resx">
       <DependentUpon>201703110710047_ApplyAnnotationsToCustomerName.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201703111118499_AddPropNameToMembershipType.resx">
+      <DependentUpon>201703111118499_AddPropNameToMembershipType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201703111123206_AddRequiredAndStringLengthTo255.resx">
+      <DependentUpon>201703111123206_AddRequiredAndStringLengthTo255.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201703111132350_UpdateNameColumnInMembershipType.resx">
+      <DependentUpon>201703111132350_UpdateNameColumnInMembershipType.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
