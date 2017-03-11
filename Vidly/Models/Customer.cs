@@ -9,5 +9,9 @@ namespace Vidly.Models
     {
         public int Id { get; set; }
         public string Name { get; set; }
+        public bool IsSubscribedToNewsletter { get; set; }
+        public MembershipType MembershipType { get; set; }
+        //by convention (name of the class+id?), the framework recognises this property as foreign key.
+        public byte MembershipTypeId { get; set; }
     }
 }
