@@ -21,8 +21,10 @@ namespace Vidly.Models
         public MembershipType MembershipType { get; set; }
 
         //by convention (name of the class+id?), the framework recognises this property as foreign key.
+        [Display(Name = "Membership Type")]
         public byte MembershipTypeId { get; set; }
 
+        [Display(Name = "Date of Birth")]
         public DateTime? Birthday { get; set; }
     }
 }
