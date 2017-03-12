@@ -255,9 +255,62 @@
     <Compile Include="Migrations\201703112220098_AddNewPropertiesToMovieAndDbContext.Designer.cs">
       <DependentUpon>201703112220098_AddNewPropertiesToMovieAndDbContext.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201703112238406_AddGenreModel.cs" />
+    <Compile Include="Migrations\201703112238406_AddGenreModel.Designer.cs">
+      <DependentUpon>201703112238406_AddGenreModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201703112245425_InsertValuesInMovies.cs" />
+    <Compile Include="Migrations\201703112245425_InsertValuesInMovies.Designer.cs">
+      <DependentUpon>201703112245425_InsertValuesInMovies.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201703112331181_InsertValuesInGenre.cs" />
+    <Compile Include="Migrations\201703112331181_InsertValuesInGenre.Designer.cs">
+      <DependentUpon>201703112331181_InsertValuesInGenre.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201703112332512_UpdateGenre.cs" />
+    <Compile Include="Migrations\201703112332512_UpdateGenre.Designer.cs">
+      <DependentUpon>201703112332512_UpdateGenre.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201703112334542_InserValuesInMovies.cs" />
+    <Compile Include="Migrations\201703112334542_InserValuesInMovies.Designer.cs">
+      <DependentUpon>201703112334542_InserValuesInMovies.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201703112358513_InsertMoreValuesInMovies.cs" />
+    <Compile Include="Migrations\201703112358513_InsertMoreValuesInMovies.Designer.cs">
+      <DependentUpon>201703112358513_InsertMoreValuesInMovies.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201703120007333_FinishInsertingValuesInMovies.cs" />
+    <Compile Include="Migrations\201703120007333_FinishInsertingValuesInMovies.Designer.cs">
+      <DependentUpon>201703120007333_FinishInsertingValuesInMovies.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201703120041032_StillAddingValuesInMovies.cs" />
+    <Compile Include="Migrations\201703120041032_StillAddingValuesInMovies.Designer.cs">
+      <DependentUpon>201703120041032_StillAddingValuesInMovies.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201703120045458_AddVeluesInMovies.cs" />
+    <Compile Include="Migrations\201703120045458_AddVeluesInMovies.Designer.cs">
+      <DependentUpon>201703120045458_AddVeluesInMovies.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201703120057027_addmore.cs" />
+    <Compile Include="Migrations\201703120057027_addmore.Designer.cs">
+      <DependentUpon>201703120057027_addmore.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201703120059368_FinalAddingMovies.cs" />
+    <Compile Include="Migrations\201703120059368_FinalAddingMovies.Designer.cs">
+      <DependentUpon>201703120059368_FinalAddingMovies.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201703120102157_test.cs" />
+    <Compile Include="Migrations\201703120102157_test.Designer.cs">
+      <DependentUpon>201703120102157_test.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201703120104495_ANotherTest.cs" />
+    <Compile Include="Migrations\201703120104495_ANotherTest.Designer.cs">
+      <DependentUpon>201703120104495_ANotherTest.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
+    <Compile Include="Models\Genre.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\MembershipType.cs" />
@@ -384,6 +437,45 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201703112220098_AddNewPropertiesToMovieAndDbContext.resx">
       <DependentUpon>201703112220098_AddNewPropertiesToMovieAndDbContext.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201703112238406_AddGenreModel.resx">
+      <DependentUpon>201703112238406_AddGenreModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201703112245425_InsertValuesInMovies.resx">
+      <DependentUpon>201703112245425_InsertValuesInMovies.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201703112331181_InsertValuesInGenre.resx">
+      <DependentUpon>201703112331181_InsertValuesInGenre.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201703112332512_UpdateGenre.resx">
+      <DependentUpon>201703112332512_UpdateGenre.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201703112334542_InserValuesInMovies.resx">
+      <DependentUpon>201703112334542_InserValuesInMovies.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201703112358513_InsertMoreValuesInMovies.resx">
+      <DependentUpon>201703112358513_InsertMoreValuesInMovies.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201703120007333_FinishInsertingValuesInMovies.resx">
+      <DependentUpon>201703120007333_FinishInsertingValuesInMovies.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201703120041032_StillAddingValuesInMovies.resx">
+      <DependentUpon>201703120041032_StillAddingValuesInMovies.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201703120045458_AddVeluesInMovies.resx">
+      <DependentUpon>201703120045458_AddVeluesInMovies.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201703120057027_addmore.resx">
+      <DependentUpon>201703120057027_addmore.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201703120059368_FinalAddingMovies.resx">
+      <DependentUpon>201703120059368_FinalAddingMovies.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201703120102157_test.resx">
+      <DependentUpon>201703120102157_test.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201703120104495_ANotherTest.resx">
+      <DependentUpon>201703120104495_ANotherTest.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
