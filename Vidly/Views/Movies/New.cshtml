@@ -2,11 +2,11 @@
 
 
 @{
-    ViewBag.Title = "New";
+    ViewBag.Title = Model.Title;
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Add New Movie</h2>
+<h2>@Model.Title</h2>
 
 @*
     We add "using" because it adds a closing </form> tag.

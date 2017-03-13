@@ -18,8 +18,8 @@
         </thead>
         <tr>
             <td>@Model.Genre.Name</td>
-            <td>@Model.ReleaseDate</td>
-            <td>@Model.AddedToDbDate</td>
+            <td>@Model.ReleaseDate.ToString("d MMM yyyy")</td>
+            <td>@Model.AddedToDbDate.ToString("d MMM yyyy")</td>
             <td>@Model.NumberInStock</td>
         </tr>
 
