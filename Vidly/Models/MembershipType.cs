@@ -23,5 +23,14 @@ namespace Vidly.Models
         //[Required]
         [StringLength(255)]
         public string Name { get; set; }
+
+        /* we need to use static fields (Unknown and payAsYouGo) in order to get rid off magic numbers in Min18YearsIfAMember 
+           I provided the full list of all Membership Types just for reference. These are not used anywhere in code. 
+        */
+        public static readonly byte Unknown = 0;
+        public static readonly byte PayAsYouGo = 1;
+        public static readonly byte Monthly = 2;
+        public static readonly byte Quaterly = 3;
+        public static readonly byte Annual = 4;
     }
 }

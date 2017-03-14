@@ -22,3 +22,18 @@ select,
 textarea {
     max-width: 280px;
 }
+
+/* Set validation error message color to red  */
+.field-validation-error {
+    color: red;
+}
+
+/* Set the border of the input field   */
+.input-validation-error {
+    border: 2px solid red;
+}
+
+/* Sets the red color to validation summary errors*/
+.validation-summary-errors {
+    color: red;
+}

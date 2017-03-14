@@ -1,4 +1,8 @@
-﻿using System;
+﻿/*
+ * 
+ */
+
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -12,7 +16,7 @@ namespace Vidly.Models
         public int Id { get; set; }
 
         //if you want to make a property not nullable in database, add required. Now name cant be null and the lenth = 255
-        [Required]
+        [Required(ErrorMessage = "Please provide customer's name")]
         [StringLength(255)]
         public string Name { get; set; }
 
@@ -25,6 +29,7 @@ namespace Vidly.Models
         public byte MembershipTypeId { get; set; }
 
         [Display(Name = "Date of Birth")]
+        [Min18YearsIfAMember]
         public DateTime? Birthday { get; set; }
     }
 }

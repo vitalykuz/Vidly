@@ -43,10 +43,18 @@ namespace Vidly.Controllers
         // GET: Customers/NewCustomer
         public ActionResult NewCustomer()
         {
+            /* when I use @Html.ValidationSummary() in Customer Form, the ID error appears
+             * because we must provide an id. In order to make this error gone, we need to inialise 
+             a new Customer and add it to the viewModel. When the customer is created 
+             the id is added automatically (it actually initialises all default values, not just id)
+            */
+            var customer = new Customer();
+
             var membershipTypes = _context.MembershipTypes.ToList();
 
             var newCustomerViewModel = new CustomerFormViewModel
             {
+                Customer = customer,
                 MembershipTypes = membershipTypes
             };
 
@@ -55,8 +63,22 @@ namespace Vidly.Controllers
 
         // this is called when a new customer is created (save button pressed in newCustomer.chtml) or if we update an existing customer
         [HttpPost]
+        // we need to add it in order Anti Forgery Token in Customer Form works
+        [ValidateAntiForgeryToken]
         public ActionResult Save(Customer customer)   // Create(NewCustomerViewModel newCustomerViewModel) -> VS smart enough to understand Customer (all info I need is in customer
         {
+            // adding a validation. Checks Annotations in Customer and then checks the Model state: ModelState.IsValid
+            if (!ModelState.IsValid)
+            {
+                var viewModel = new CustomerFormViewModel
+                {
+                    Customer = customer,
+                    MembershipTypes = _context.MembershipTypes.ToList()
+                };
+
+                return View("CustomerForm", viewModel);
+            }
+
             //I now use this method to Update a customer or to create a new customer
 
             if (customer.Id == 0)
