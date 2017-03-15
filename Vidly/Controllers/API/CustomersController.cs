@@ -26,33 +26,31 @@ namespace Vidly.Controllers.API
         }
 
         // GET /api/customers/1
-        public CustomerDto GetCustomer(int id)
+        public IHttpActionResult GetCustomer(int id)
         {
             var customer = _context.Customers.SingleOrDefault(c => c.Id == id);
 
             // this is a convention. 
             // If the given resource is not found we throw the standart Not Found Httpresponce
             if (customer == null)
-            {
-                throw new HttpResponseException(HttpStatusCode.NotFound);
-            }
+                return NotFound();
 
-            return Mapper.Map<Customer, CustomerDto>(customer);
+            return Ok(Mapper.Map<Customer, CustomerDto>(customer));
         }
 
         /*  POST /api/customers
          by convention we return a new resource (in ths case a new customer)
          If we name a method like CreateCustomer, it's not by convention so we must add [HttpPost] above the method. This method is better.
          But if we name the method as PostCustomer then the asp.net does know that it's a post method (dont need to specify [HttpPost]). official Microsoft approach.
+         Update: i change the return type to IHttpActionResult. Don't need to throw an error. 
+         Please see GitHub from 9.15 PM 15-Mar-17
          */
         [HttpPost]
-        public CustomerDto CreateCustomer(CustomerDto customerDto) // this customer comes form a request body
+        public IHttpActionResult CreateCustomer(CustomerDto customerDto) // this customer comes form a request body
         {
             // this is a convention.  we throw the standart Bad Request HttpResponce
             if (!ModelState.IsValid)
-            {
-                throw new HttpResponseException(HttpStatusCode.BadRequest);
-            }
+                return BadRequest();
 
             var customer = Mapper.Map<CustomerDto, Customer>(customerDto);
 
@@ -61,7 +59,7 @@ namespace Vidly.Controllers.API
 
             customerDto.Id = customer.Id;
 
-            return customerDto;
+            return Created(new Uri(Request.RequestUri + "/" + customer.Id), customerDto);
         }
 
         // PUT /api/customers/1
