@@ -48,8 +48,11 @@ else
 {
     <script>
         $(document).ready(function () {
-            // we find a customer tale (it has id = "customers") and the clas .js-delete in the table(which is a delete button)
-            $("#customers .js-delete").on("click",
+            // before handling the click even, we get reference to datatables 
+            $("#customers").DataTable();
+
+            // we find a customer tale (it has id = "customers") and the class .js-delete in the table(which is a delete button)
+            $("#customers").on("click", ".js-delete",
                 function () {
                     // we need to have a reference to button here, because "this" below will reference something else
                     var button = $(this);
