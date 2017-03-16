@@ -29,15 +29,18 @@ namespace Vidly.Controllers
         // GET: Customers
         public ActionResult Index()
         {
+            //LAST UPDATE. We don;t need to use customer anymore becase we render them from api on a client
+
             // the query is only executed when we iterate through each customer (it does it in View)
             // var customers = _context.Customers; return View(customers)
             // we can add .ToList() and the query is executed.
             //     var customers = _context.Customers.ToList();
 
             //if we leave as it above, we wont be able to use MemebershipTypes of the customer (for example in index.cshtml). In order to fix it we use Include
-            var customers = _context.Customers.Include(c => c.MembershipType).ToList();
+            //var customers = _context.Customers.Include(c => c.MembershipType).ToList();
 
-            return View(customers);
+            //return View(customers);
+            return View();
         }
 
         // GET: Customers/NewCustomer
